@@ -1,0 +1,446 @@
+/* GLOBAL */
+body{
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    background: #f2f6f9;
+}
+
+/* NAVBAR */
+nav{
+    background: #0a6cff;
+    padding: 20px 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+nav ul{
+    display: flex;
+    gap: 25px;
+    list-style: none;
+}
+
+nav ul li a{
+    text-decoration: none;
+    color: white;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+nav ul li a:hover{
+    color: yellow;
+}
+
+/* HERO SECTION */
+.hero{
+    height: 60vh;
+    background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)),
+                  url('https://rsleimena.com/images/main-slider/direksi3.webp') center/cover no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-align: center;
+    padding: 40px;
+    margin-top: 80px;
+}
+
+.hero h1{
+    font-size: 3.5em;
+    margin: 0;
+}
+
+.hero p{
+    font-size: 1.2em;
+    margin-top: 10px;
+}
+
+/* SECTION GENERIC */
+section{
+    padding: 60px 80px;
+}
+
+h2{
+    font-size: 2em;
+    margin-bottom: 20px;
+    color: #033b81;
+}
+
+/* LOKASI */
+.map-container{
+    display: flex;
+    gap: 30px;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.map-container iframe{
+    width: 500px;
+    height: 300px;
+    border-radius: 10px;
+    border: none;
+}
+
+.info-box{
+    background: white;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+    max-width: 400px;
+}
+
+/* JADWAL */
+table{
+    width: 600px;
+    border-collapse: collapse;
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+table th, table td{
+    padding: 15px;
+    border-bottom: 1px solid #eee;
+    text-align: left;
+}
+
+table th{
+    background: #0a6cff;
+    color: white;
+}
+
+/* ADMIN FORM */
+form{
+    background: white;
+    padding: 30px;
+    border-radius: 12px;
+    max-width: 500px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+}
+
+input, textarea{
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
+
+button{
+    background: #0a6cff;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1em;
+    transition: 0.3s;
+}
+
+button:hover{
+    background: #064cb7;
+}
+
+/* GALERI */
+.galerii{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    margin-top: 30px;
+}
+
+.galerii img{
+    width: 95%;
+    height: 350px;
+    object-fit: cover;
+    border-radius: 12px;
+    transition: 0.3s;
+}
+.galerii img:hover{
+    transform: scale(1.05);
+}   
+.galeri{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.galeri img{
+    width: 90%;
+    height: 350px;
+    object-fit: cover;
+    border-radius: 12px;
+    transition: 0.3s;
+}
+
+.galeri img:hover{
+    transform: scale(1.05);
+}
+
+/* DOKTER */
+.dokter-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    
+}
+
+.card{
+    background: white;
+    padding: 20px;
+    border-radius: 12px;
+    text-align: center;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+}
+
+.card img{
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 15px;
+    transition: 0.3s;
+}
+.card img:hover{
+    transform: scale(1.1);
+  
+}
+
+/* FOOTER */
+footer{
+    background: #0a6cff;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin-top: 40px;
+}
+/* SLIDER */
+
+.images {
+    display: flex;
+    width: 100%;
+    transition: 0.5s;
+}
+.images img {
+    width: 100%;
+}
+.wibowo {
+    width: 750px;
+    margin: auto;
+    border-radius: 50px;
+    overflow: hidden;
+    position: relative;
+    top: -4%;
+}
+#slide-1:target ~ .images {
+    margin-left: 0px;
+}
+#slide-2:target ~ .images {
+    margin-left: -100%;
+}
+#slide-3:target ~ .images {
+    margin-left: -200%;
+}
+#slide-4:target ~ .images {
+    margin-left: -300%;
+}
+.navigaasi a {
+
+    width: 25px;
+    display: inline-block;
+    height: 25px;
+    background-color: #dedede;
+    font-size: 0px;
+    border-radius: 50%;
+    margin: 3px;
+    transition: 0.5s;
+}
+.navigaasi a:hover {
+    background-color: #033b81;
+}
+.navigaasi{
+    position: absolute;
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;
+    text-align: center;
+    margin-top: -50px;
+   
+}
+@media screen and (max-width: 700px) {
+    .wibowo {
+        width: 90%;
+    }
+    .map-container iframe{
+        width: 90%;
+        height: 300px;
+    }
+}
+
+   /* JAM */
+  .clock {
+    width: 300px;
+    height: 300px;
+    border: 5px solid #333;
+    border-radius: 50%;
+    position: absolute;
+    margin: 40px auto;
+    left: 67%;
+    top: 37%;
+  }
+
+  /* jarum dasar */
+  .hand {
+    position: absolute;
+    width: 50%;
+    height: 2px;
+    background: #333;
+    top: 50%;
+    left: 50%;
+    transform-origin: 0% 50%;
+    transform: rotate(0deg);
+  }
+
+  /* jarum detik */
+  .second {
+    height: 1px;
+    background: red;
+    animation: sec 60s linear infinite;
+  }
+
+  /* jarum menit */
+  .minute {
+    width: 45%;
+    animation: min 3600s linear infinite;
+  }
+
+  /* jarum jam */
+  .hour {
+    width: 35%;
+    height: 3px;
+    animation: hour 43200s linear infinite;
+  }
+
+  /* titik tengah */
+  .center {
+    width: 12px;
+    height: 12px;
+    background: #333;
+    border-radius: 50%;
+    position: absolute;
+    top: calc(50% - 6px);
+    left: calc(50% - 6px);
+  }
+
+  @keyframes sec {
+    from {transform: rotate(0deg);}
+    to   {transform: rotate(360deg);}
+  }
+
+  @keyframes min {
+    from {transform: rotate(0deg);}
+    to   {transform: rotate(360deg);}
+  }
+
+  @keyframes hour {
+    from {transform: rotate(0deg);}
+    to   {transform: rotate(360deg);}
+  }
+/* Dr fredy */
+.dr.fredy{
+    color: #0066cc;
+}
+.dr.fredy h1{
+    color: #0066cc; 
+    border-bottom: 2px solid #eee; 
+    padding-bottom: 10px;
+}
+.dr.fredy h2{
+    color: #333;
+}
+.dr.fredy h3{
+    color: #666;
+}
+.dr.fredy p{
+    font-style: italic;
+    color: #555;
+}
+
+
+/* Gaya untuk kontainer utama cerita (tag <main>) */
+main {
+    /* Mengambil padding dari section generik yang sudah ada di CSS Anda */
+    padding: 60px 80px; 
+    max-width: 1000px; 
+    margin: 30px auto; /* Menengahkan konten */
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08); /* Shadow lembut */
+}
+
+.dr-container {
+    text-align: center; /* Untuk menengahkan gambar dan judul utama */
+}
+/* Gambar Dokter */
+.dr-image {
+    display: block;
+    width: 230px;
+    height: 230px;
+    object-fit: cover;
+    margin: 0 auto 30px auto; 
+    border-radius:50%;
+    border: 5px solid #0a6cff; /* Border biru dari warna navbar Anda */
+    box-shadow: 0 0 0 8px rgba(10, 108, 255, 0.2); /* Efek lingkaran luar yang lembut */
+    transition: transform 0.3s;
+}
+
+.dr-image:hover {
+    transform: scale(1.05);
+}
+/* Judul Utama */
+.dr-container h1 {
+    font-size: 2.5em;
+    color: #033b81; /* Warna biru gelap dari H2 generik */
+    margin-bottom: 5px;
+    padding-bottom: 0;
+}
+
+/* Tagline/Deskripsi Singkat */
+.story-tagline {
+    font-size: 1.1em;
+    font-style: italic;
+    color: #555;
+    margin-bottom: 40px;
+}
+
+/* Struktur Cerita per Babak */
+.story-section {
+    text-align: left; /* Mengatur teks kembali ke kiri untuk keterbacaan */
+    padding: 20px 0;
+    border-top: 1px dashed #e0e0e0; /* Garis pemisah antar babak */
+    margin-top: 20px;
+}
+
+.story-section:first-of-type {
+    border-top: none;
+    margin-top: 0;
+}
+
+.story-section h3 {
+    color: #333;
+    font-size: 1.3em;
+    border-bottom: 1px solid #f0f0f0;
+    padding-bottom: 5px;
+    margin-top: 15px;
+}
+
+.story-section p {
+    line-height: 1.8;
+    color: #444;
+    text-align: justify;
+}
